@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   userName: string = ""; 
   errorMessage: string = ""; 
+  logoUrl: string = "assets/logo.png";
 
   validateUserName(): void {
     const regex = /^[A-Z][a-zA-Z]{2,}$/; 
@@ -16,6 +17,9 @@ export class AppComponent {
     } else {
       this.errorMessage = ""; 
     }
+  }
+  openBridgeLabz(): void {
+    window.open("https://www.bridgelabz.com", "_blank"); // ✅ Open Website in New Tab
   }
 }
 
